@@ -11,6 +11,8 @@ Ein erweitertes Clicker-Game mit Prestige-System, Achievements und Upgrades. Ent
 - 📊 **Statistiken**: Verfolge deinen Fortschritt
 - 💾 **Autosave**: Spielstand wird automatisch gespeichert
 
+- ## Bekannte BUGS: Kauffunktion, Button lassen sich trotz mehr Punkteals Kosten nicht anklicken
+
 ## Spielanleitung
 
 ### Grundlagen
