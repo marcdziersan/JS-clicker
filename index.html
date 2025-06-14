@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Clicker Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Advanced Clicker</h1>
+            <div class="prestige-section">
+                <p>Prestige-Punkte: <span id="prestige-points">0</span></p>
+                <button id="prestige-button" disabled>Prestige (Erfordert 10.000 Punkte)</button>
+            </div>
+        </div>
+        
+        <div class="score-display">
+            <p>Punkte: <span id="points">0</span></p>
+            <p>Punkte pro Klick: <span id="points-per-click">1</span></p>
+            <p>Punkte pro Sekunde: <span id="points-per-second">0</span></p>
+            <p>Multiplikator: <span id="multiplier">1</span>x</p>
+        </div>
+        
+        <div class="click-area">
+            <button id="click-button">Klick mich!</button>
+            <div id="click-effect"></div>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('upgrades')">Upgrades</button>
+            <button class="tab-button" onclick="openTab('achievements')">Achievements</button>
+            <button class="tab-button" onclick="openTab('stats')">Statistiken</button>
+        </div>
+        
+        <div id="upgrades" class="tab-content">
+            <h2>Upgrades</h2>
+            <div class="upgrades-grid">
+                <!-- Upgrades werden per JS eingefügt -->
+            </div>
+        </div>
+        
+        <div id="achievements" class="tab-content" style="display:none">
+            <h2>Achievements</h2>
+            <div class="achievements-grid">
+                <!-- Achievements werden per JS eingefügt -->
+            </div>
+        </div>
+        
+        <div id="stats" class="tab-content" style="display:none">
+            <h2>Statistiken</h2>
+            <div class="stats-grid">
+                <p>Gesamtklicks: <span id="total-clicks">0</span></p>
+                <p>Gesamtpunkte: <span id="total-points">0</span></p>
+                <p>Spielzeit: <span id="play-time">0</span> Sekunden</p>
+                <p>Prestige: <span id="prestige-count">0</span> mal</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

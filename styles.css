@@ -1,0 +1,234 @@
+/* Grundlegende Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background-color: #2d2d2d;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Score-Anzeige */
+.score-display {
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Klick-Bereich */
+.click-area {
+    position: relative;
+    margin: 20px 0;
+}
+
+#click-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 0 #3a8f3d;
+}
+
+#click-button:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+#click-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active {
+    background-color: #4CAF50;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-content {
+    background-color: #3a3a3a;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    min-height: 300px;
+}
+
+/* Upgrades */
+.upgrades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.upgrade {
+    background-color: #4a4a4a;
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.upgrade:hover {
+    transform: translateY(-5px);
+}
+
+.upgrade.unlocked {
+    background-color: #3a5a3a;
+}
+
+.upgrade.locked {
+    opacity: 0.6;
+}
+
+.upgrade h3 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+.upgrade button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.upgrade button:hover {
+    background-color: #3a8f3d;
+}
+
+.upgrade button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+/* Achievements */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.achievement {
+    background-color: #4a4a4a;
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+}
+
+.achievement.unlocked {
+    background-color: #5a3a5a;
+    border-left: 5px solid #af4caf;
+}
+
+.achievement.locked {
+    opacity: 0.6;
+    filter: grayscale(80%);
+}
+
+.achievement .reward {
+    color: gold;
+    font-weight: bold;
+}
+
+/* Prestige */
+.prestige-section {
+    background-color: #3a3a5a;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#prestige-button {
+    background-color: #af4caf;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#prestige-button:hover {
+    background-color: #8f3a8f;
+}
+
+#prestige-button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+/* Animationen */
+@keyframes clickEffect {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+.click-effect-circle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: clickEffect 0.5s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .score-display {
+        grid-template-columns: 1fr;
+    }
+    
+    .upgrades-grid {
+        grid-template-columns: 1fr;
+    }
+}
