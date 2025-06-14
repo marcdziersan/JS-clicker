@@ -56,19 +56,3 @@ Beiträge sind willkommen! Bitte erstelle einen Pull Request für größere Änd
 
 [MIT](https://choosealicense.com/licenses/mit/) - Freie Verwendung und Modifikation erlaubt
 ```
-
-### Anpassungen für dein Projekt:
-
-1. **Screenshot**: Ersetze `screenshot.png` mit einem echten Screenshot deines Spiels
-2. **Repository-URL**: Ersetze den GitHub-Link mit deinem tatsächlichen Repository
-3. **Features**: Füge besondere Features hinzu, die dein Spiel einzigartig machen
-4. **Credits**: Füge eine Danksagung hinzu, falls du Code von anderen genutzt hast
-
-Diese README bietet:
-- Klare Installationsanleitung
-- Übersicht über Spielmechaniken
-- Professionelle Projektstruktur
-- Möglichkeiten für zukünftige Erweiterungen
-- Lizenzinformation
-
-Du kannst die README jederzeit erweitern, besonders wenn du neue Features hinzufügst!
